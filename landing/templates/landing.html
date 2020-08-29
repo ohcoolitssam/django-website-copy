@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %} sp | home {% endblock title %}
+
+{% block content %}
+
+<div class="lp_about" id="lp_about">
+	<img src="{% static 'images/landing_pic.png' %}" alt="lp_image" class="lp_image" id="lp_image">
+		
+	<p> <b> Hi, my name is Samuel Phillips. </b> <br> <br> I am currently a senior Computer Science student at the University of North Carolina at Charlotte. I have a concentration in Bioinformatics and a minor in Biology. Over these last few years, I have gotten education on programming languages from Java to Python to Ruby and some lab work experience in common lab techniques. <br> <br> The purpose of this website was to test my existing knowledge in Python and Java and use those techniques to work on full stack development. I wanted most of the server side programming to be Python, since it’s my favorite language, so I stumbled across the web framework Django and decided to pursue the ‘Django stack.’ Frontend consists of HTML, CSS, JavaScript, Bootstrap, jQuery; Backend consists of Python, Heroku, SQLite and some Java, all with the Django framework. The mac terminal and sublime text were used to edit the code and then AWS S3 and SES to finally bring the website into deployment. All completed during the entire course of Summer 2020 during this pandemic. <br> <br> As a side note, here are some of my favorite hobbies at the moment: soccer, learning/playing acoustic guitar, technology (from computers to video games), exercise, biology and overall learning new things! <br> <br> </p>
+</div>
+
+<div class="lp_projects" id="lp_projects">
+
+	<p class="projects_header" id="projects"> <b> <i> My Past Projects: <i> </b> </p>
+
+	{% for project in projects %}
+		<a href="{% url 'project_detail' project.pk %}" > <div class="card">
+		<div class="card-body">
+			<h5 class="card-title"> {{ project.title }} </h5>
+			<p class="card-text"> {{ project.small_description }} </p>
+			<p class="card-text"><small class="text-muted">Last updated 05/24/2020 </small></p>
+		</div>
+		<div class="card_image">
+			<img class="card-img-bottom" src="{{ project.main_image.url }}" alt="{{ project.title }}">
+		</div>
+	</div> </a>
+	{% endfor %}
+</div>
+
+<div class="lp_end">
+	<a onclick="topFunction()"> <img src="{% static 'images/scroll.png' %}" alt="scroll" class="scroll"> </a>
+	<br>
+	<a onclick="topFunction()"> <p> <b> Click here to scroll back to the top. </b> </p> </a>
+</div>
+
+{% endblock %}
+

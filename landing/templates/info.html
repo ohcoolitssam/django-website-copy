@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title> sp | info </title>
+
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- personal css -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+
+	<!-- favicon -->
+	<link id="favicon" rel="shortcut icon" type="image/png" href="{% static 'images/f1.png' %}"/>
+
+</head>
+
+<body style="background-color: black">
+
+	<!-- navbar code -->
+	<header>
+		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.png' %}" alt="website logo" class="logo" id="logo"> </a>	
+
+		<div class ="hamburger">
+			<div class="line-1"></div>
+			<div class="line-2"></div>
+			<div class="line-3"></div>
+		</div>
+
+		<ul class="nav-links">
+			<li> <a href="/#lp_about" onclick="topFunction()"> about me </a></li>
+			<li> <a href="/#lp_projects" onclick="projectsFunction()"> projects </a></li>
+			<li> <a href="/contact"> contact me </a></li>
+		</ul>
+    </header>
+
+    <div class="info_container">
+		<h4> Site Disclaimer </h4>
+		<p> Some images are strictly parodies and are not going to be distributed/ sold. This site also runs no ads and gains no money at all. All images, programming aspects, fonts and more are all open source and/or fall underfair-use laws.</p>
+		<p> Otherwise please contact me at ‘sphill67.work@gmail.com’. </p>
+		<p> Images used (all copyright free): <p>
+		<ul>
+			<li> https://pixabay.com/photos/blur-chart-computer-data-finance-1853262/</li>
+			<li> https://pixabay.com/photos/code-html-digital-coding-web-1076536/</li>
+			<li>https://pixabay.com/photos/work-office-team-company-internet-5382501</li>
+			<li> Any other cover images all came from https://pixabay.com</li>
+
+		</ul>
+		<p> All other images are created via Adobe XD and/or screenshotted from my past work. </p>
+		<p> Fonts used: </p>
+		<ul>
+			<li> https://fonts.google.com/specimen/Montserrat?query=Mont </li>
+			<li> https://fonts.google.com/specimen/Open+Sans?query=Open+Sans</li>
+			<li> https://fonts.google.com/specimen/Kadwa?query=Kadwa</li>
+			<li> https://fonts.google.com/specimen/Nanum+Gothic?query=Nanum</li>
+			<li> https://fonts.google.com/specimen/EB+Garamond?query=EB+Garamond </li>
+			<li> https://fonts.google.com/specimen/Domine </li>
+			<li> Built-in fonts in Mac OS and Microsoft Office, both with purchased versions (Helvetica, Times New Roman, etc.) </li>
+		</ul>
+		<p> Open Source Programming Used: </p>
+		<ul>
+			<li> https://www.djangoproject.com/ </li>
+			<li> https://www.python.org/ </li>
+			<li> https://gunicorn.org/ </li>
+			<li> https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html </li>
+			<li> https://www.sqlite.org/index.html </li>
+			<li> http://www.heroku.com/ </li>
+			<li> https://pillow.readthedocs.io/en/stable/ </li>
+			<li> https://html.spec.whatwg.org/ </li>
+			<li> https://www.w3.org/TR/CSS2/ </li>
+			<li> https://www.javascript.com/ </li>
+		</ul>
+	</div>
+
+	<br> <hr>
+	<a href="/"> <p class="tail_link"> <i> Click here to go back to the homepage. <i> </p> </a>
+
+	<!-- bootstrap javascript -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- personal javascript -->
+  	<script> 
+  		//iFrame javascript
+		function resizeIFrameToFitContent(iFrame){
+		  Frame.width  = iFrame.contentWindow.document.body.scrollWidth;
+		  iframesFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+		}
+
+		//resize a certain iframe:
+		window.addEventListener('DOMContentLoaded', function(e) {
+		  var iFrame = document.getElementById( 'iFrame1' );
+		  resizeIFrameToFitContent( iFrame );
+
+		  // or, to resize all iframes:
+		  var iframes = document.querySelectorAll("iframe");
+		  for( var i = 0; i < iframes.length; i++) {
+		    resizeIFrameToFitContent( iframes[i] );
+		  }
+		});
+
+		//scroll to top function
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+
+		function projectsFunction() {
+			document.body.scrollTop = 500;
+			document.documentElement.scrollTop = 500;
+		}
+
+		//navbar jscript
+		const hamburger = document.querySelector(".hamburger");
+		const navLinks = document.querySelector(".nav-links");
+		const links = document.querySelectorAll(".nav-links li");
+
+		hamburger.addEventListener("click", () => {
+		  navLinks.classList.toggle("open");
+		  links.forEach(link => { link.classList.toggle("fade"); });
+
+		  //burger close animation
+		  hamburger.classList.toggle('toggle');
+		});
+
+	</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,31 @@
+{% extends "alt_base.html" %}
+{% load static %}
+
+{% block alt_title %} sp | contact {% endblock alt_title %}
+
+{% block alt_content %}
+
+    <!-- other page code -->
+<div class="other_container">
+	<iframe src="{% static 'files/resume.pdf' %}" alt='resume' class="resume" id="iFrame1"> </iframe>
+
+	<div class="co_container">
+		<div class="error_message" style="text-align:center; padding-right: 3em"> 
+			{% if messages %}
+			<ul class="messages" style="list-style: none; color: red">
+    		{% for message in messages %}
+    		<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    		{% endfor %}
+			</ul>
+			{% endif %}
+		</div>
+		<form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button class="co_button"> submit </button>
+			<p class="co_text"> <i> **note: there are max lengths to each input; 50, 50 and 500 respectively </i> </p>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
