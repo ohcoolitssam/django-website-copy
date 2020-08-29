@@ -19,17 +19,24 @@ from django.conf import settings
 from django.urls import path, include
 from django.conf.urls.static import static
 
+#sitemaps
+from django.contrib.sitemaps.views import sitemap
+from .sitemaps import StaticViewSitemap
+
 #from the landing app and contact app, their views are imported
 from landing.views import landing_view, project_detail_view, info_view
 from contact.views import contact_view, success_view
 
+sitemaps = { 'static': StaticViewSitemap }
+
 #url patterns for all views + homepage + admin
 urlpatterns = [
 	path('', landing_view, name="home"),
-    path('project<int:pk>/', project_detail_view, name='project_detail'),
-	path('info/', info_view, name="info"),
-	path('contact/', contact_view, name="other"),
+    path('project/', project_detail_view, name='project_detail'),
+    path('info/', info_view, name="info"),
+	path('contact/', contact_view, name="contact"),
 	path('contact/success/', success_view, name="success"),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="sitemaps"),
     path('admin/', admin.site.urls),
 ] 
 

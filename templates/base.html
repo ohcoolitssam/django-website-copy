@@ -18,14 +18,14 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 	<!-- favicon -->
-	<link id="favicon" rel="shortcut icon" type="image/png" href="{% static 'images/f1.png' %}"/>
+	<link id="favicon" rel="shortcut icon" type="image/png" href="{% static 'images/f1.webp' %}"/>
 
 </head>
 
 <body style='background-color: #000000'>
 
 	<nav>
-		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.png' %}" alt="website logo" class="logo" id="logo"> </a>
+		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.webp' %}" alt="website logo" class="logo" id="logo"> </a>
 
 		<div class ="hamburger">
 			<div class="line-1"></div>
@@ -61,12 +61,12 @@
 		  nav.classList.toggle('sticky', window.scrollY > 0);
 
 		  if (nav.classList.contains('sticky')){
-		    lo.setAttribute('src','{% static "images/logos/logoa1.png" %}')
-		    fav.setAttribute('href','{% static "images/f2.png" %}')
+		    lo.setAttribute('src','{% static "images/logos/logoa1.webp" %}')
+		    fav.setAttribute('href','{% static "images/f2.webp" %}')
 
 		  } else {
-		    lo.setAttribute('src','{% static "images/logos/logo1.png" %}')
-		    fav.setAttribute('href','{% static "images/f1.png" %}')
+		    lo.setAttribute('src','{% static "images/logos/logo1.webp" %}')
+		    fav.setAttribute('href','{% static "images/f1.webp" %}')
 		  }    
 		});
 

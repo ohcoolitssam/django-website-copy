@@ -539,6 +539,7 @@ hr {
 		padding-bottom: 10em;
 		padding-top: 5em;
 		z-index: 7;
+		padding-left: 1em;
 	} 
 
 	.logo {
@@ -562,7 +563,7 @@ hr {
 	}
 
 	nav.sticky .nav-links {
-		background-color: white;
+		background-color: #C1E7E3;
 		border: solid black;
 	}
 
@@ -592,9 +593,9 @@ hr {
 
 	.lp_image {
 		padding: 0 0 0;
-		width: 350px;
+		width: 60%;
 		margin-bottom: 0;
-		margin-top: 2em;
+		margin-top: 3em;
 	}
 
 	.lp_about p {
@@ -603,7 +604,8 @@ hr {
 		margin-left: auto;
 		margin-right: auto;
 		padding-top: 25px;
-		width: 350px;
+		width: 70%;
+		font-size: 12px;
 	}
 
 	.lp_end p {
@@ -657,6 +659,10 @@ hr {
 
 @media screen and (max-width: 550px) {
 	/* base.html/alt_base.html + navbar + tailbar */
+	.logo {
+		width: 120px;
+		margin-top: 0.5em;
+	}
 	/* landing.html */
 	/* project_detail.html */
 	.slide {
@@ -687,6 +693,7 @@ hr {
 	.lp_projects {
 		height: 1350px;
 	}
+
 	/* project_detail.html */
 	/* info.html */
 	.info_container h4, .info_container p {
@@ -704,12 +711,16 @@ hr {
 @media screen and (max-width: 375px) {
 	/* base.html/alt_base.html + navbar + tailbar */
 	/* landing.html */
+	.lp_about {
+		height: 1100px;
+	}
+
 	.lp_image {
-		width: 300px;
+		width: 80%;
 	}
 
 	.lp_about p {
-		width: 300px;
+		width: 80%;
 	}
 	/* project_detail.html */
 	/* info.html */
@@ -728,9 +739,12 @@ hr {
 
 @media screen and (max-width: 320px) {
 	/* base.html/alt_base.html + navbar + tailbar */
+	.logo {
+		width: 100px;
+	}
 	/* landing.html */
 	.lp_about {
-		height: 1350px;
+		height: 1200px;
 	}
 
 	.lp_image {

@@ -5,6 +5,7 @@ import os
 from io import BytesIO 
 from PIL import Image 
 from django.core.files import File 
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -18,7 +19,9 @@ class Project(models.Model):
     carousel_image_1 = models.ImageField(upload_to='project_images', default='static/images/test.png')
     carousel_image_2 = models.ImageField(upload_to='project_images', default='static/images/test.png')
     carousel_image_3 = models.ImageField(upload_to='project_images', default='static/images/test.png')
-    
+    slug = models.SlugField(blank=True, null=True)
+
     #title of the project is returned for admin
     def __str__(self):
         return self.title
+    
