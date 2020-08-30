@@ -6,11 +6,8 @@
 <head>
 
 	<meta charset="UTF-8">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="description" content="Personal portfolio website by Samuel Phillips created with the Django framework, Python and more.">
-	<meta name="keywords" content="Home, Projects, Contact Me, Contact, Personal Portfolio, Samuel, Phillips, Samuel Phillips, UI, UI/UX, UX, Python, Java, HTML, CSS, JavaScript, Django, Portfolio, Website, Sublime Text, Adobe XD, Heroku, Pillow, Google, Google Domains, Boto3, AWS, AWS S3, AWS SES">
-	<meta name="author" content="Samuel Phillips">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<title> sp | info </title>
 
@@ -21,7 +18,7 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 	<!-- favicon -->
-	<link id="favicon" rel="shortcut icon" type="image" href="{% static 'images/f1.webp' %}" onerror="imgError(this)">
+	<link id="favicon" rel="shortcut icon" type="image" href="{% static 'images/f1.webp' %}" onload="setImage(this)">
 
 </head>
 
@@ -29,7 +26,7 @@
 
 	<!-- navbar code -->
 	<header>
-		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.webp' %}" alt="website logo" class="logo" id="logo" onerror="imgError(this)"> </a>	
+		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.webp' %}" alt="website logo" class="logo" id="logo" onload="setImage(this)"> </a>	
 
 		<div class ="hamburger">
 			<div class="line-1"></div>
@@ -116,6 +113,7 @@
 		  document.documentElement.scrollTop = 0;
 		}
 
+		//scroll to projects
 		function projectsFunction() {
 			document.body.scrollTop = 500;
 			document.documentElement.scrollTop = 500;
@@ -134,15 +132,11 @@
 		  hamburger.classList.toggle('toggle');
 		});
 
-		//if image doesn't load
-		function imgError(image) {
-			image.onerror = "";
-			var x = image.src;
-			x = x.substr(0, x.lastIndexOf(".")) + ".png";
-			image.src = x;
-			return true;
+		//change image if mobile
+		function setImage(image) {
+			if(window.innerWidth < 770) { image.src = image.src.substr(0, x.lastIndexOf(".")) + ".png"; }
+			else { image.src = image.src; }
 		}
-
 	</script>
 
 </body>
