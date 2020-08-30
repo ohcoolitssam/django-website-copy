@@ -32,11 +32,11 @@ sitemaps = { 'static': StaticViewSitemap }
 #url patterns for all views + homepage + admin
 urlpatterns = [
 	path('', landing_view, name="home"),
-    path('project/', project_detail_view, name='project_detail'),
+    path('project<pk>/', project_detail_view, name='project_detail'),
     path('info/', info_view, name="info"),
 	path('contact/', contact_view, name="contact"),
 	path('contact/success/', success_view, name="success"),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name="sitemaps"),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('admin/', admin.site.urls),
 ] 
 

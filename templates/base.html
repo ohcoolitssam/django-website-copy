@@ -18,14 +18,14 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 	<!-- favicon -->
-	<link id="favicon" rel="shortcut icon" type="image/png" href="{% static 'images/f1.webp' %}"/>
+	<link id="favicon" rel="shortcut icon" type="image/png" href="{% static 'images/f1.webp' %}" onerror="imgError(this)"/>
 
 </head>
 
 <body style='background-color: #000000'>
 
 	<nav>
-		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.webp' %}" alt="website logo" class="logo" id="logo"> </a>
+		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.webp' %}" alt="website logo" class="logo" id="logo" onerror="imgError(this)"> </a>
 
 		<div class ="hamburger">
 			<div class="line-1"></div>
@@ -95,6 +95,16 @@
 	  		//burger animation
 			hamburger.classList.toggle('toggle');
 		});
+
+		//if image doesn't load
+		function imgError(image) {
+			image.onerror = "";
+			var x = image.src;
+			x = x.substr(0, x.lastIndexOf(".")) + ".png";
+			image.src = x;
+			return true;
+		}
+
 
 	</script>
 
