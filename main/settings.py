@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #debug = false -> website deployed
 #debug = true -> website in development
-DEBUG = True
+DEBUG = False
 
 #if debug is false, aws s3 & aws ses settings are activated
 if DEBUG == False:
