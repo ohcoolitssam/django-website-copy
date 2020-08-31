@@ -18,14 +18,14 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
 	<!-- favicon -->
-	<link id="favicon" rel="shortcut icon" type="image/png" href="{% static 'images/f1.webp' %}" onload="setImage(this)"/>
+	<link id="favicon" rel="shortcut icon" type="image/png" href="{% static 'images/f1.webp' %}">
 
 </head>
 
 <body style='background-color: #000000'>
 
 	<nav>
-		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.webp' %}" alt="website logo" class="logo" id="logo" onload="setImage(this)"> </a>
+		<a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.webp' %}" alt="website logo" class="logo" id="logo" onload="setImage()"> </a>
 
 		<div class ="hamburger">
 			<div class="line-1"></div>
@@ -60,21 +60,22 @@
 			var fav = document.getElementById('favicon');
 			nav.classList.toggle('sticky', window.scrollY > 0);
 
-			if (nav.classList.contains('sticky') == true && window.innerWidth > 770) {
-		    	lo.setAttribute('src','{% static "images/logos/logoa1.webp" %}');
-		    	fav.setAttribute('href','{% static "images/f2.webp" %}');
-
-		  	} else if (nav.classList.contains('sticky') == true && window.innerWidth < 770) {
-		    	lo.setAttribute('src','{% static "images/logos/logoa1.png" %}');
-		    	fav.setAttribute('href','{% static "images/f2.png" %}');
-
-		  	} else if (nav.classList.contains('sticky') == false && window.innerWidth > 770) {  
-		  		lo.setAttribute('src','{% static "images/logos/logo1.webp" %}');
-		    	fav.setAttribute('href','{% static "images/f1.webp" %}');
-
-			} else if (nav.classList.contains('sticky') == false && window.innerWidth < 770) {  
-		  		lo.setAttribute('src','{% static "images/logos/logo1.png" %}');
-		    	fav.setAttribute('href','{% static "images/f1.png" %}');
+			if (nav.classList.contains('sticky')) {
+				if(window.innerWidth < 770) { 
+					lo.setAttribute('src','{% static "images/logos/logoa1.png" %}');
+					fav.setAttribute('href','{% static "images/f2.png" %}');
+				} else {
+					lo.setAttribute('src','{% static "images/logos/logoa1.webp" %}');
+					fav.setAttribute('href','{% static "images/f2.webp" %}');
+				}
+			} else {
+				if(window.innerWidth < 770) { 
+					lo.setAttribute('src','{% static "images/logos/logo1.png" %}');
+					fav.setAttribute('href','{% static "images/f1.png" %}');
+				} else {
+					lo.setAttribute('src','{% static "images/logos/logo1.webp" %}');
+					fav.setAttribute('href','{% static "images/f1.webp" %}');
+				}
 			}
 		});
 
@@ -105,23 +106,20 @@
 			hamburger.classList.toggle('toggle');
 		});
 
-		//if image doesn't load
-		//function imgError(image) {
-			//image.onerror = "";
-			//var x = image.src;
-			//x = x.substr(0, x.lastIndexOf(".")) + ".png";
-			//image.src = x;
-			//return true;
-		//}
-
-		//onerror="imgError(this)"
-
-		//change image if mobile
-		function setImage(image) {
-			if(window.innerWidth < 770) { image.src = image.src.substr(0, x.lastIndexOf(".")) + ".png"; }
-			else { image.src = image.src; }
-		}
-
+		function setImage() {
+			if(window.innerWidth < 770 && document.getElementById("image").src.endsWith(".webp")) {
+    			var x = document.getElementById("image").src;
+        		x = x.split(".webp");
+    			x = x[0] + ".png";
+    			document.getElementById("image").src = x;
+			} else if(window.innerWidth < 770 && document.getElementById("image").src.endsWith(".png")) {
+				var y = document.getElementById("image").src; 
+				document.getElementById("image").src = y;
+			} else {
+				var y = document.getElementById("image").src; 
+				document.getElementById("image").src = y;
+			}
+		}  
 
 	</script>
 
