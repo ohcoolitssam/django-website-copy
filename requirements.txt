@@ -29,4 +29,8 @@ tinify==1.5.1
 urllib3==1.25.10
 uWSGI==2.0.19.1
 websocket-client==0.57.0
+<<<<<<< HEAD
 whitenoise==5.1.0
+=======
+whitenoise==5.1.0
+>>>>>>> 823c41c1362df09293ace31bd7b6f3b550400f63
