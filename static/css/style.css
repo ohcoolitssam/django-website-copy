@@ -457,7 +457,42 @@ hr {
 
 @media screen and (max-width: 925px) {
 	/* base.html/alt_base.html + navbar + tailbar */
+	.tail_container {
+		background-color: #000000;
+		height: 5vh;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		width: 90%;
+		background-color: #C1E7E3;
+		position: static;
+	}
+
+	.tail_links {
+		list-style-type: none;
+		display: flex;
+		margin-left: -3em;
+		margin-top: -0.5em;
+	}
+
+	.tail_links li a p {
+		text-decoration: none;
+		padding: 0em 0.5em 0em;
+		color: #1E1E1E;
+	}
+
 	/* landing.html */
+	.lp_about {
+		height: 700px;
+	}
+
+	.lp_projects {
+		height: 550px;
+	}
+
 	.lp_about p {
 		font-size: 13px;
 	}
@@ -605,7 +640,31 @@ hr {
 		background: black;
 	} 
 
-	.tail_link {
+	.tail_container {
+		background-color: #000000;
+		height: 5vh;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		width: 90%;
+		background-color: #C1E7E3;
+		position: static;
+	}
+
+	.tail_links {
+		list-style-type: none;
+		display: flex;
+		margin-left: -3em;
+		margin-top: -0.5em;
+	}
+
+	.tail_links li a p {
+		text-decoration: none;
+		padding: 0em 0.5em 0em;
+		color: #1E1E1E;
 		font-size: 12px;
 	}
 
@@ -615,6 +674,10 @@ hr {
 		height: 1150px;
 		text-align: center;
 		margin-top: 0;
+	}
+
+	.lp_projects {
+		height: 550px;
 	}
 
 	.lp_image {
@@ -691,7 +754,43 @@ hr {
 		width: 120px;
 		margin-top: 0.5em;
 	}
+
+	.tail_container {
+		background-color: #000000;
+		height: 5vh;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		width: 90%;
+		background-color: #C1E7E3;
+		position: static;
+	}
+
+	.tail_links {
+		list-style-type: none;
+		display: flex;
+		margin-left: -3em;
+		margin-top: -0.5em;
+	}
+
+	.tail_links li a p {
+		text-decoration: none;
+		padding: 0em 0.5em 0em;
+		color: #1E1E1E;
+		font-size: 12px;
+	}
 	/* landing.html */
+	.lp_about {
+		height: 1150px;
+	}
+
+	.lp_projects {
+		height: 550px;
+	}
+
 	/* project_detail.html */
 	.slide {
 		width: 100%;
@@ -709,6 +808,7 @@ hr {
 		text-align: center;
 		width: 100%;
 	}
+
 	/* info.html */
 	/* contact.html */
 	/* success.html */
@@ -718,9 +818,41 @@ hr {
 
 @media screen and (max-width: 425px) {
 	/* base.html/alt_base.html + navbar + tailbar */
+	.tail_container {
+		background-color: #000000;
+		height: 5vh;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		width: 90%;
+		background-color: #C1E7E3;
+		position: static;
+	}
+
+	.tail_links {
+		list-style-type: none;
+		display: flex;
+		margin-left: -3em;
+		margin-top: -0.5em;
+	}
+
+	.tail_links li a p {
+		text-decoration: none;
+		padding: 0em 0.5em 0em;
+		color: #1E1E1E;
+		font-size: 12px;
+	}
+
 	/* landing.html */
 	.lp_projects {
 		height: 1350px;
+	}
+
+	.lp_about {
+		height: 1150px;
 	}
 
 	/* project_detail.html */
@@ -740,9 +872,41 @@ hr {
 
 @media screen and (max-width: 375px) {
 	/* base.html/alt_base.html + navbar + tailbar */
+	.tail_container {
+		background-color: #000000;
+		height: 5vh;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		width: 90%;
+		background-color: #C1E7E3;
+		position: static;
+	}
+
+	.tail_links {
+		list-style-type: none;
+		display: flex;
+		margin-left: -3em;
+		margin-top: -0.5em;
+	}
+
+	.tail_links li a p {
+		text-decoration: none;
+		padding: 0em 0.5em 0em;
+		color: #1E1E1E;
+		font-size: 12px;
+	}
+
 	/* landing.html */
 	.lp_about {
-		height: 1100px;
+		height: 1150px;
+	}
+
+	.lp_projects {
+		height: 1350px;
 	}
 
 	.lp_image {
@@ -778,6 +942,10 @@ hr {
 		height: 1200px;
 	}
 
+	.lp_projects {
+		height: 1350px;
+	}
+
 	.lp_image {
 		width: 200px;
 	}
@@ -785,6 +953,35 @@ hr {
 	.lp_about p {
 		width: 200px;
 	}
+
+	.tail_container {
+		background-color: #000000;
+		height: 5vh;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	hr {
+		width: 90%;
+		background-color: #C1E7E3;
+		position: static;
+	}
+
+	.tail_links {
+		list-style-type: none;
+		display: flex;
+		margin-left: -3em;
+		margin-top: -0.5em;
+	}
+
+	.tail_links li a p {
+		text-decoration: none;
+		padding: 0em 0.5em 0em;
+		color: #1E1E1E;
+		font-size: 12px;
+	}
+
 	/* project_detail.html */
 	/* info.html */
 	.info_container h4, .info_container p {
@@ -798,3 +995,4 @@ hr {
 	/* success.html */
 	/* log.html */
 }
+
