@@ -2,7 +2,7 @@ from django.core.mail import send_mail, BadHeaderError, EmailMessage
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, redirect, get_object_or_404
 from django.template.loader import get_template
-from .models import Project
+from .models import Project, webLog
 
 
 # Create your views here.
@@ -18,3 +18,8 @@ def project_detail_view(request, pk):
 
 def info_view(request):
 	return render(request, "info.html", {})
+
+def log_view(request):
+	logs = webLog.objects.all()
+	context = {'logs': logs }
+	return render(request, "log.html", context)

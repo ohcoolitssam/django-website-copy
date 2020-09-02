@@ -12,67 +12,72 @@
     <meta name="author" content="Samuel Phillips">
     <meta name="keywords" content="HTML, CSS, JavaScript, Python, Django, Samuel, Phillips, Samuel Phillips, Personal, Portfolio, Personal Portfolio, Charlotte, the University of North Carolina at Charlotte, University, North, Carolina, North Carolina, UNCC, UNC">
 
-  <title>{% block alt_title %} samuel's portfolio {% endblock alt_title %}</title>
+    <title>{% block alt_title %} samuel's portfolio {% endblock alt_title %}</title>
 
-  <!-- bootstrap css -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- personal css -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <!-- personal css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 
-  <!-- favicon -->
-  <link id="favicon" rel="shortcut icon" type="image" href="{% static 'images/f1.png' %}"/>
+    <!-- favicon -->
+    <link id="favicon" rel="shortcut icon" type="image" href="{% static 'images/f1.png' %}"/>
 
 </head>
 
-<body style="background-color: black">
+<body style='background-color: #000000'>
 
-  <!-- navbar code -->
-  <header>
-    <a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.png' %}" alt="website logo" class="logo"> </a>
+    <!-- navbar code -->
+    <header>
+      <a href="/" class="logo_link"> <img src="{% static 'images/logos/logo1.png' %}" alt="website logo" class="logo"> </a>
 
-    <div class ="hamburger">
-      <div class="line-1"></div>
-      <div class="line-2"></div>
-      <div class="line-3"></div>
+      <div class ="hamburger">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+
+      <ul class="nav-links">
+        <li> <a href="/#lp_about" onclick="tNavLinks(); topFunction();"> about me </a></li>
+        <li> <a href="/#lp_projects" onclick="tNavLinks(); projectsFunction();"> projects </a></li>
+        <li> <a href="/contact"> contact me </a></li>
+      </ul>
+    </header>
+
+    {% block alt_content %} content {% endblock %}
+
+    <br> <br> <br> <hr> 
+    <div class="tail_container">
+        <ul class="tail_links">
+            <li> <a href="/info"><p class="t1_link"><i> more info <i></p></a> </i>
+            <li> <p class="t2_link"> | </p> </li>
+            <li> <a href="/log" class="t3_link"><p><i> website logs </i></p></a> </li>
+        </ul>
     </div>
 
-    <ul class="nav-links">
-      <li> <a href="/#lp_about" onclick="topFunction()"> about me </a></li>
-      <li> <a href="/#lp_projects" onclick="projectsFunction()"> projects </a></li>
-      <li> <a href="/contact"> contact me </a></li>
-    </ul>
-  </header>
 
-  {% block alt_content %} content {% endblock %}
+    <!-- bootstrap javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <br> <br> <br> <hr> 
-  <a href="/info"> <p class="tail_link"> <i> More info about this website here. <i> </p> </a>
-
-  <!-- bootstrap javascript -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-  <!-- personal javascript -->
-  <script>
-
+    <script> 
     //sticky navbar jscript
     window.addEventListener('scroll', function(){
-      var nav = document.querySelector('nav');
-      var lo = document.getElementById('logo');
-      var fav = document.getElementById('favicon');
-      nav.classList.toggle('sticky', window.scrollY > 0);
+        var nav = document.querySelector('nav');
+        var lo = document.getElementById('logo');
+        var fav = document.getElementById('favicon');
+        nav.classList.toggle('sticky', window.scrollY > 0);
 
-      if (nav.classList.contains('sticky')) {
-        lo.setAttribute('src','{% static "images/logos/logoa1.png" %}');
-        fav.setAttribute('href','{% static "images/f2.png" %}');
-      } else {
-        lo.setAttribute('src','{% static "images/logos/logo1.png" %}');
-        fav.setAttribute('href','{% static "images/f1.png" %}');
-      }
+        if (nav.classList.contains('sticky')) {
+            lo.setAttribute('src','{% static "images/logos/logoa1.png" %}');
+            fav.setAttribute('href','{% static "images/f2.png" %}');
+        } else {
+            lo.setAttribute('src','{% static "images/logos/logo1.png" %}');
+            fav.setAttribute('href','{% static "images/f1.png" %}');
+        }
     });
-    
+
     //navbar jscript
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".nav-links");
@@ -80,26 +85,53 @@
 
     //burger open animation
     hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-      links.forEach(link => { link.classList.toggle("fade"); });
+        navLinks.classList.toggle("open");
+        links.forEach(link => {
+        link.classList.toggle("fade");
+        });
 
-      //burger animation
-      hamburger.classList.toggle('toggle');
+        //burger animation
+        hamburger.classList.toggle('toggle');
     });
+
+    //navbar toggle
+    function tNavLinks() {
+        if (navLinks.classList.contains('open')) {
+            navLinks.classList.toggle("open");
+            hamburger.classList.toggle('toggle');
+        }
+    }
 
     //scroll to top function
     function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 
     //scroll to projects
     function projectsFunction() {
-      document.body.scrollTop = 500;
-      document.documentElement.scrollTop = 500;
+        document.body.scrollTop = 500;
+        document.documentElement.scrollTop = 500;
     }
 
-  </script>
+    //iFrame javascript
+    function resizeIFrameToFitContent(iFrame) {
+        Frame.width  = iFrame.contentWindow.document.body.scrollWidth;
+        iframesFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+    }
+
+    //resize a certain iframe:
+    window.addEventListener('DOMContentLoaded', function(e) {
+        var iFrame = document.getElementById( 'iFrame1' );
+        resizeIFrameToFitContent( iFrame );
+
+        // or, to resize all iframes:
+        var iframes = document.querySelectorAll("iframe");
+        for( var i = 0; i < iframes.length; i++) {
+            resizeIFrameToFitContent( iframes[i] );
+        }
+    });
+    </script>
 
 </body>
 

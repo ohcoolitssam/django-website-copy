@@ -1,0 +1,14 @@
+{% extends "alt_base.html" %}
+{% load static %}
+
+{% block alt_title %} sp | website log {% endblock alt_title %}
+
+{% block alt_content %}
+
+<div class="log_container">
+	{% for log in logs %}
+	<p> - [{{log.date}}] : {{log.description}} </p>
+	{% endfor %}
+</div>
+
+{% endblock %}

@@ -25,7 +25,7 @@
 
 </head>
 
-<body style="background-color: black">
+<body style='background-color: #000000'>
 
 	<!-- navbar code -->
 	<header>
@@ -38,10 +38,10 @@
 		</div>
 
 		<ul class="nav-links">
-			<li> <a href="/#lp_about" onclick="topFunction()"> about me </a></li>
-			<li> <a href="/#lp_projects" onclick="projectsFunction()"> projects </a></li>
-			<li> <a href="/contact"> contact me </a></li>
-		</ul>
+            <li> <a href="/#lp_about" onclick="tNavLinks(); topFunction();"> about me </a></li>
+            <li> <a href="/#lp_projects" onclick="tNavLinks(); projectsFunction();"> projects </a></li>
+            <li> <a href="/contact"> contact me </a></li>
+      </ul>
     </header>
 
     <div class="info_container">
@@ -83,77 +83,90 @@
 	</div>
 
 	<br> <hr>
-	<a href="/"> <p class="tail_link"> <i> Click here to go back to the homepage. <i> </p> </a>
+	<div class="tail_container">
+		<ul class="tail_links">
+			<li> <a href="/"><p class="t1_link"><i> homepage <i></p></a> </i>
+			<li> <p class="t2_link"> | </p> </li>
+			<li> <a href="/log" class="t3_link"><p><i> website logs </i></p></a> </li>
+		</ul>
+	</div>
 
 	<!-- bootstrap javascript -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-	<!-- personal javascript -->
-  	<script> 
+	<script> 
+    //sticky navbar jscript
+    window.addEventListener('scroll', function(){
+        var nav = document.querySelector('nav');
+        var lo = document.getElementById('logo');
+        var fav = document.getElementById('favicon');
+        nav.classList.toggle('sticky', window.scrollY > 0);
 
-  		//sticky navbar jscript
-		window.addEventListener('scroll', function(){
-			var nav = document.querySelector('nav');
-			var lo = document.getElementById('logo');
-			var fav = document.getElementById('favicon');
-			nav.classList.toggle('sticky', window.scrollY > 0);
+        if (nav.classList.contains('sticky')) {
+            lo.setAttribute('src','{% static "images/logos/logoa1.png" %}');
+            fav.setAttribute('href','{% static "images/f2.png" %}');
+        } else {
+            lo.setAttribute('src','{% static "images/logos/logo1.png" %}');
+            fav.setAttribute('href','{% static "images/f1.png" %}');
+        }
+    });
 
-			if (nav.classList.contains('sticky')) {
-				lo.setAttribute('src','{% static "images/logos/logoa1.png" %}');
-				fav.setAttribute('href','{% static "images/f2.png" %}');
-			} else {
-				lo.setAttribute('src','{% static "images/logos/logo1.png" %}');
-				fav.setAttribute('href','{% static "images/f1.png" %}');
-			}
-		});
+    //navbar jscript
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links li");
 
-  		//iFrame javascript
-		function resizeIFrameToFitContent(iFrame){
-		  Frame.width  = iFrame.contentWindow.document.body.scrollWidth;
-		  iframesFrame.height = iFrame.contentWindow.document.body.scrollHeight;
-		}
+    //burger open animation
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        links.forEach(link => {
+        link.classList.toggle("fade");
+        });
 
-		//resize a certain iframe:
-		window.addEventListener('DOMContentLoaded', function(e) {
-		  var iFrame = document.getElementById( 'iFrame1' );
-		  resizeIFrameToFitContent( iFrame );
+        //burger animation
+        hamburger.classList.toggle('toggle');
+    });
 
-		  // or, to resize all iframes:
-		  var iframes = document.querySelectorAll("iframe");
-		  for( var i = 0; i < iframes.length; i++) {
-		    resizeIFrameToFitContent( iframes[i] );
-		  }
-		});
+    //navbar toggle
+    function tNavLinks() {
+    	if (navLinks.classList.contains('open')) {
+    		navLinks.classList.toggle("open");
+    		hamburger.classList.toggle('toggle');
+    	}
+    }
 
-		//scroll to top function
-		function topFunction() {
-		  document.body.scrollTop = 0;
-		  document.documentElement.scrollTop = 0;
-		}
+    //scroll to top function
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
 
-		//scroll to projects
-		function projectsFunction() {
-			document.body.scrollTop = 500;
-			document.documentElement.scrollTop = 500;
-		}
+    //scroll to projects
+    function projectsFunction() {
+        document.body.scrollTop = 500;
+        document.documentElement.scrollTop = 500;
+    }
 
-		//navbar jscript
-		const hamburger = document.querySelector(".hamburger");
-		const navLinks = document.querySelector(".nav-links");
-		const links = document.querySelectorAll(".nav-links li");
-		
-		//burger open animation
-		hamburger.addEventListener("click", () => {
-		  navLinks.classList.toggle("open");
-		  links.forEach(link => { link.classList.toggle("fade"); });
+    //iFrame javascript
+    function resizeIFrameToFitContent(iFrame) {
+        Frame.width  = iFrame.contentWindow.document.body.scrollWidth;
+        iframesFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+    }
 
-		  //burger close animation
-		  hamburger.classList.toggle('toggle');
-		});
-		
-	</script>
+    //resize a certain iframe:
+    window.addEventListener('DOMContentLoaded', function(e) {
+        var iFrame = document.getElementById( 'iFrame1' );
+        resizeIFrameToFitContent( iFrame );
+
+        // or, to resize all iframes:
+        var iframes = document.querySelectorAll("iframe");
+        for( var i = 0; i < iframes.length; i++) {
+            resizeIFrameToFitContent( iframes[i] );
+        }
+    });
+    </script>
 
 </body>
 

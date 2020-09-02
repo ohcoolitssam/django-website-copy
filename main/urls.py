@@ -24,7 +24,7 @@ from django.contrib.sitemaps.views import sitemap
 from .sitemaps import StaticViewSitemap
 
 #from the landing app and contact app, their views are imported
-from landing.views import landing_view, project_detail_view, info_view
+from landing.views import landing_view, project_detail_view, info_view, log_view
 from contact.views import contact_view, success_view
 
 sitemaps = { 'static': StaticViewSitemap }
@@ -34,6 +34,7 @@ urlpatterns = [
 	path('', landing_view, name="home"),
     path('project<pk>/', project_detail_view, name='project_detail'),
     path('info/', info_view, name="info"),
+    path('log/', log_view, name="log"),
 	path('contact/', contact_view, name="contact"),
 	path('contact/success/', success_view, name="success"),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),

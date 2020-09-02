@@ -73,7 +73,7 @@ with open('keys/secret_key.txt') as f:
     SECRET_KEY = f.read().strip()
 
 #urls for the website 
-ALLOWED_HOSTS = ['sphill.info', 'www.sphill.info','sphill.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 #email that gets 400-500 errors
 ADMINS = [('admin', 'sphill67.work@gmail.com')]
