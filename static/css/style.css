@@ -49,7 +49,7 @@ header {
 	margin-left: auto;
 	font-weight: 600;
 	cursor: pointer;
-	opacity: 80%;
+	opacity: 75%;
 } 
 
 .nav-links li a:hover {
@@ -71,6 +71,8 @@ header {
   	align-items: left;
   	margin-top: 0em;
   	margin-left: 1.5em;
+  	opacity: 75%;
+  	transition: all 0.5s ease-in-out; 
 }
 
 .logo:hover {
@@ -78,6 +80,8 @@ header {
 	animation-duration: 1s;
 	animation-direction: alternate;
 	animation-iteration-count: infinite;
+	opacity: 100%;
+	transition: all 0.5s ease-in-out; 
 }
 
 @keyframes lhover {
@@ -94,6 +98,7 @@ nav.sticky {
 	transition: all 0.5s ease-in-out; 
 	position: fixed;
 	top: 0;
+	box-shadow: 0px 10px #ADCECB;
 }
 
 nav.sticky .nav-links li a{
@@ -112,6 +117,7 @@ hr {
 	width: 90%;
 	background-color: #C1E7E3;
 	position: static;
+	opacity: 75%;
 }
 
 .tail_links {
@@ -124,7 +130,14 @@ hr {
 .tail_links li a p {
 	text-decoration: none;
 	padding: 0em 0.5em 0em;
+	opacity: 75%;
+	transition: all 0.5s ease-in-out; 
 	color: #C1E7E3;
+}
+
+.tail_links li a p:hover {
+	opacity: 100%;
+	transition: all 0.5s ease-in-out; 
 }
 
 /* landing.html */
@@ -155,6 +168,7 @@ hr {
 	padding-left: 25px;
 	padding-right: 50px;
 	width: 600px;
+	opacity: 75%;
 	color: #C1E7E3;
 }
 
@@ -185,6 +199,7 @@ hr {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	transition: all 0.5s ease-in-out; 
 	border-radius: 5px;
 }
 
@@ -194,7 +209,7 @@ hr {
 
 .card:hover {
 	box-shadow: 5px 5px #B4B4B4;
-	transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-in-out; 
 	opacity: 100%;
 	animation-name: chover;
 	animation-duration: 0.5s;
@@ -233,11 +248,19 @@ hr {
 	z-index: 2;
 }
 
-.lp_end .scroll, .lp_end .scroll:hover {
+.lp_end .scroll {
 	width: 15px;
 	animation: move 2s infinite alternate;
 	cursor: pointer;
 	margin-top: auto;
+	opacity: 75%;
+	transition: all 0.5s ease-in-out; 
+}
+
+.lp_end .scroll:hover {
+	animation: move 2s infinite alternate;
+	transition: all 0.5s ease-in-out; 
+	opacity: 100%;
 }
 
 @keyframes move {
@@ -254,12 +277,13 @@ hr {
 	opacity: 80%;
 	cursor: pointer;
 	text-align: center;
+	transition: all 0.5s ease-in-out; 
 }
 
 .lp_end p:hover {
 	color: #C1E7E3;
 	opacity: 100%;
-	transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-in-out; 
 	cursor: pointer;
 	text-decoration: none;
 }
@@ -283,11 +307,12 @@ hr {
 
 .carousel-inner {
 	border-radius: 5px;
+	transition: all 0.5s ease-in-out; 
 }
 
 .carousel-inner:hover{
 	box-shadow: 5px 5px #B4B4B4;
-	transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-in-out; 
 }
 
 .carousel-control-prev-icon {
@@ -313,6 +338,7 @@ hr {
 	float: right;
 	margin-right: auto;
 	padding-left: 1em;
+	opacity: 75%;
 	color: #C1E7E3;
 }
 
@@ -332,12 +358,13 @@ hr {
   	display: block;
   	opacity: 80%;
   	margin-right: auto;
+  	transition: all 0.5s ease-in-out; 
 }
 
 .co_container:hover {
 	opacity: 100%;
 	box-shadow: 5px 5px #B4B4B4;
-	transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-in-out; 
 }
 
 .co_container input {
@@ -371,10 +398,11 @@ hr {
 	height: 30px;
 	border-radius: 5px;
 	cursor: pointer;
+	transition: all 0.5s ease-in-out; 
 }
 
 .co_button:hover {
-	transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-in-out; 
 	background-color: #e3d402;
 	font-weight: 600;
 }
@@ -392,12 +420,13 @@ hr {
 	opacity: 80%;
 	height: 522px;
 	border-radius: 5px;
+	transition: all 0.5s ease-in-out; 
 }
 
 .other_container iframe:hover {
 	opacity: 100%;
 	box-shadow: 5px 5px #B4B4B4;
-	transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-in-out; 
 }
 
 /* success.html */
@@ -411,6 +440,7 @@ hr {
 
 .sp_container h3, .sp_container p {
 	color: #C1E7E3;
+	opacity: 75%;
 }
 
 .sp_button {
@@ -422,11 +452,14 @@ hr {
 	height: 30px;
 	border-radius: 5px;
 	cursor: pointer;
+	transition: all 0.5s ease-in-out; 
+	opacity: 75%;
 }
 
 .sp_button:hover {
-	transition: all 0.5s ease-out; 
+	transition: all 0.5s ease-in-out; 
 	background-color: #e3d402;
+	opacity: 100%;
 }
 
 /* info.html */
@@ -439,6 +472,7 @@ hr {
 
 .info_container p, .info_container h4, .info_container ul li {
 	color: #C1E7E3;
+	opacity: 75%;
 }
 
 /* log.html */
@@ -453,6 +487,7 @@ hr {
 
 .log_container p {
 	color: #C1E7E3;
+	opacity: 75%;
 }
 
 @media screen and (max-width: 925px) {
@@ -480,7 +515,7 @@ hr {
 
 	/* project_detail.html */
 	.pd_container {
-		height: 850px;
+		height: 1000px;
 	}
 	/* info.html */
 	/* contact.html */
@@ -503,7 +538,7 @@ hr {
     	height: 3px;
     	background: #C1E7E3;
     	margin: 5px;
-    	transition: all 0.5s ease-out; 
+    	transition: all 0.5s ease-in-out; 
     }
 
   	.line-2 {
@@ -511,7 +546,7 @@ hr {
     	height: 3px;
     	background: #C1E7E3;
     	margin: 5px;
-    	transition: all 0.5s ease-out; 
+    	transition: all 0.5s ease-in-out; 
   	}
 
   	.line-3 {
@@ -519,7 +554,7 @@ hr {
     	height: 3px;
     	background: #C1E7E3;
     	margin: 5px;
-    	transition: all 0.5s ease-out; 
+    	transition: all 0.5s ease-in-out; 
   	}
 
 	.hamburger {
@@ -529,6 +564,13 @@ hr {
 		top: 50%;
 		transform: translate(-5%, -50%);
 		z-index: 8;
+		opacity: 75%;
+		transition: all 0.5s ease-in-out; 
+	}
+
+	.hamburger:hover {
+		opacity: 100%;
+		transition: all 0.5s ease-in-out; 
 	}
   
 	.nav-links {
@@ -539,7 +581,7 @@ hr {
 		flex-direction: column;
 		clip-path: circle(100px at 90% -30%);
 		-webkit-clip-path: (100px at 90% -30%);
-		transition: all 1s ease-out;
+		transition: all 1s ease-in-out;
 		pointer-events: none;
 		border: solid #C1E7E3;
 		z-index: 6;
@@ -676,7 +718,7 @@ hr {
 	/* project_detail.html */
 	.pd_container {
 		display: block;
-		height: 1250px;
+		height: 1400px;
 	}
 
 	.slide {
@@ -716,7 +758,6 @@ hr {
 	.co_container {
 		width: 90%;
 	}
-
 	/* log.html */
 
 }
@@ -806,12 +847,16 @@ hr {
 		width: 80%;
 	}
 
+	.lp_projects {
+		height: 1350px;
+	}
+
 	.lp_about p {
 		width: 80%;
 	}
 	/* project_detail.html */
 	.pd_container {
-		height: 1300px;
+		height: 1400px;
 	}
 	/* info.html */
 	.info_container h4, .info_container p {
@@ -867,15 +912,14 @@ hr {
 	/* success.html */
 	/* log.html */
 }
-	
-	
+
 @media screen and (max-width: 300px) {
 	/* base.html/alt_base.html + navbar + tailbar */
 	/* landing.html */
 	.lp_about {
 		height: 1300px;
 	}
-	
+
 	.lp_projects {
 		height: 1500px;
 	}
@@ -888,6 +932,7 @@ hr {
 	/* success.html */
 	/* log.html */
 }
+
 
 
 
