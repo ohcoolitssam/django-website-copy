@@ -867,4 +867,28 @@ hr {
 	/* success.html */
 	/* log.html */
 }
+	
+	
+@media screen and (max-width: 300px) {
+	/* base.html/alt_base.html + navbar + tailbar */
+	/* landing.html */
+	.lp_about {
+		height: 1300px;
+	}
+	
+	.lp_projects {
+		height: 1500px;
+	}
+	/* project_detail.html */
+	.pd_container {
+		height: 2000px;
+	}
+	/* info.html */
+	/* contact.html */
+	/* success.html */
+	/* log.html */
+}
+
+
+
 
