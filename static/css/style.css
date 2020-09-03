@@ -858,6 +858,14 @@ hr {
 	.pd_container {
 		height: 1400px;
 	}
+
+	.pd_text p {
+		font-size: 0.8em;
+	}
+
+	.pd_text h2 {
+		font-size: 1.5em;
+	}
 	/* info.html */
 	.info_container h4, .info_container p {
 		font-size: 12px;
@@ -916,13 +924,6 @@ hr {
 @media screen and (max-width: 300px) {
 	/* base.html/alt_base.html + navbar + tailbar */
 	/* landing.html */
-	.lp_about {
-		height: 1300px;
-	}
-
-	.lp_projects {
-		height: 1500px;
-	}
 	/* project_detail.html */
 	.pd_container {
 		height: 2000px;
@@ -932,8 +933,15 @@ hr {
 	/* success.html */
 	/* log.html */
 }
-
-
-
+	
+@media screen and (max-width: 225px) {
+	/* base.html/alt_base.html + navbar + tailbar */
+	/* landing.html */
+	/* project_detail.html */
+	/* info.html */
+	/* contact.html */
+	/* success.html */
+	/* log.html */
+}
 
 
