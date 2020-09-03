@@ -117,14 +117,14 @@ hr {
 .tail_links {
 	list-style-type: none;
 	display: flex;
-	margin-left: -3em;
+	margin-left: -2.75em;
 	margin-top: -0.5em;
 }
 
 .tail_links li a p {
 	text-decoration: none;
 	padding: 0em 0.5em 0em;
-	color: #1E1E1E;
+	color: #C1E7E3;
 }
 
 /* landing.html */
@@ -226,7 +226,7 @@ hr {
 .lp_end {
 	background: #000000;
 	display: grid;
-	padding-top: 7em;
+	padding-top: 4em;
 	text-align: center;
 	position: relative;
 	box-shadow: 0px -10px #B4B4B4;
@@ -457,40 +457,13 @@ hr {
 
 @media screen and (max-width: 925px) {
 	/* base.html/alt_base.html + navbar + tailbar */
-	.tail_container {
-		background-color: #000000;
-		height: 5vh;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	hr {
-		width: 90%;
-		background-color: #C1E7E3;
-		position: static;
-	}
-
-	.tail_links {
-		list-style-type: none;
-		display: flex;
-		margin-left: -3em;
-		margin-top: -0.5em;
-	}
-
-	.tail_links li a p {
-		text-decoration: none;
-		padding: 0em 0.5em 0em;
-		color: #1E1E1E;
-	}
-
 	/* landing.html */
 	.lp_about {
 		height: 700px;
 	}
 
-	.lp_projects {
-		height: 550px;
+	.lp_image {
+		padding-bottom: 13em;
 	}
 
 	.lp_about p {
@@ -506,6 +479,9 @@ hr {
 	}
 
 	/* project_detail.html */
+	.pd_container {
+		height: 850px;
+	}
 	/* info.html */
 	/* contact.html */
 	/* success.html */
@@ -664,7 +640,7 @@ hr {
 	.tail_links li a p {
 		text-decoration: none;
 		padding: 0em 0.5em 0em;
-		color: #1E1E1E;
+		color: #C1E7E3
 		font-size: 12px;
 	}
 
@@ -674,10 +650,6 @@ hr {
 		height: 1150px;
 		text-align: center;
 		margin-top: 0;
-	}
-
-	.lp_projects {
-		height: 550px;
 	}
 
 	.lp_image {
@@ -704,6 +676,7 @@ hr {
 	/* project_detail.html */
 	.pd_container {
 		display: block;
+		height: 1250px;
 	}
 
 	.slide {
@@ -755,40 +728,21 @@ hr {
 		margin-top: 0.5em;
 	}
 
-	.tail_container {
-		background-color: #000000;
-		height: 5vh;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	hr {
-		width: 90%;
-		background-color: #C1E7E3;
-		position: static;
-	}
-
-	.tail_links {
-		list-style-type: none;
-		display: flex;
-		margin-left: -3em;
-		margin-top: -0.5em;
-	}
-
 	.tail_links li a p {
-		text-decoration: none;
-		padding: 0em 0.5em 0em;
-		color: #1E1E1E;
-		font-size: 12px;
+		font-size: 0.8em;
 	}
+
+	.lp_end p {
+		font-size: 0.8em;
+	}
+
 	/* landing.html */
 	.lp_about {
 		height: 1150px;
 	}
 
 	.lp_projects {
-		height: 550px;
+		height: 1300px;
 	}
 
 	/* project_detail.html */
@@ -818,39 +772,10 @@ hr {
 
 @media screen and (max-width: 425px) {
 	/* base.html/alt_base.html + navbar + tailbar */
-	.tail_container {
-		background-color: #000000;
-		height: 5vh;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	hr {
-		width: 90%;
-		background-color: #C1E7E3;
-		position: static;
-	}
-
 	.tail_links {
-		list-style-type: none;
-		display: flex;
-		margin-left: -3em;
-		margin-top: -0.5em;
+		margin-left: -2.5em;
 	}
-
-	.tail_links li a p {
-		text-decoration: none;
-		padding: 0em 0.5em 0em;
-		color: #1E1E1E;
-		font-size: 12px;
-	}
-
 	/* landing.html */
-	.lp_projects {
-		height: 1350px;
-	}
-
 	.lp_about {
 		height: 1150px;
 	}
@@ -872,41 +797,9 @@ hr {
 
 @media screen and (max-width: 375px) {
 	/* base.html/alt_base.html + navbar + tailbar */
-	.tail_container {
-		background-color: #000000;
-		height: 5vh;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	hr {
-		width: 90%;
-		background-color: #C1E7E3;
-		position: static;
-	}
-
-	.tail_links {
-		list-style-type: none;
-		display: flex;
-		margin-left: -3em;
-		margin-top: -0.5em;
-	}
-
-	.tail_links li a p {
-		text-decoration: none;
-		padding: 0em 0.5em 0em;
-		color: #1E1E1E;
-		font-size: 12px;
-	}
-
 	/* landing.html */
 	.lp_about {
 		height: 1150px;
-	}
-
-	.lp_projects {
-		height: 1350px;
 	}
 
 	.lp_image {
@@ -917,6 +810,9 @@ hr {
 		width: 80%;
 	}
 	/* project_detail.html */
+	.pd_container {
+		height: 1300px;
+	}
 	/* info.html */
 	.info_container h4, .info_container p {
 		font-size: 12px;
@@ -954,35 +850,11 @@ hr {
 		width: 200px;
 	}
 
-	.tail_container {
-		background-color: #000000;
-		height: 5vh;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	hr {
-		width: 90%;
-		background-color: #C1E7E3;
-		position: static;
-	}
-
-	.tail_links {
-		list-style-type: none;
-		display: flex;
-		margin-left: -3em;
-		margin-top: -0.5em;
-	}
-
-	.tail_links li a p {
-		text-decoration: none;
-		padding: 0em 0.5em 0em;
-		color: #1E1E1E;
-		font-size: 12px;
-	}
-
 	/* project_detail.html */
+	.pd_container {
+		height: 1500px;
+	}
+
 	/* info.html */
 	.info_container h4, .info_container p {
 		font-size: 10px;
